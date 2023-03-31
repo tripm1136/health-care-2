@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 import { Color } from "../../../color/Color";
+import { ScrollToTopComponent } from "../scroll-top/ScrollTopComponent";
 import { FooterComponent } from "./FooterComponent";
 import { HeaderComponent } from "./HeaderComponent";
 
@@ -45,7 +46,10 @@ export const Layout = ({ children }: Props) => {
       <Header>
         <HeaderComponent />
       </Header>
-      <Body id="body_component">{children}</Body>
+      <Body id="body_component">
+        {children}
+        <ScrollToTopComponent />
+      </Body>
       <Footer>
         <FooterComponent />
       </Footer>

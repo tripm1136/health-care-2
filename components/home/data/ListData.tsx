@@ -45,7 +45,7 @@ const ItemCard = styled.div`
 
     letter-spacing: 0.15px;
 
-    color: #ffffff;ß
+    color: #ffffff;
   }
 `;
 export const ListDataComponent = () => {

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import topUrl from "../../assets/image/home/d01.png";
 import manGaph from "../../assets/image/home/main_graph.png";
-import { ScrollToTopComponent } from "../ui/common/scroll-top/ScrollTopComponent";
 import { ListDataComponent } from "./data/ListData";
 import { FilterButtonComponent } from "./filter-button/FilterButton";
 
@@ -14,19 +13,19 @@ const Main = styled.div`
 
 const Meal = styled.div`
   display: grid;
-  grid-template-columns: 540px auto;
+  grid-template-columns: 5fr 7fr;
   background: #2e2e2e;
   .image1 {
     height: 316px;
-    width: 540px;∏
-    object-fit: cover;
+    width: 100%;
+    object-fit: fill;
   }
   .image2 {
     margin-left: 53px;
     margin-top: 12px;
-    width: 589px;
-    height: 293.62px;
-    object-fit: cover;
+    width: 100%;
+    height: 293px;
+    object-fit: fill;
   }
 `;
 
@@ -39,7 +38,6 @@ export const HomeComponent = () => {
       </Meal>
       <FilterButtonComponent />
       <ListDataComponent />
-      <ScrollToTopComponent />
     </Main>
   );
 };

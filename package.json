@@ -7,6 +7,9 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "antd": "^5.3.3",
+    "babel-preset-next": "^1.4.0",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -21,7 +24,9 @@
   "babel": {
     "env": {
       "development": {
-        "presets": ["next/babel"],
+        "presets": [
+          "next/babel"
+        ],
         "plugins": [
           [
             "styled-components",
@@ -33,7 +38,9 @@
         ]
       },
       "production": {
-        "presets": ["next/babel"],
+        "presets": [
+          "next/babel"
+        ],
         "plugins": [
           [
             "styled-components",

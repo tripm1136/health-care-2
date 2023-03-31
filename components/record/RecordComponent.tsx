@@ -5,15 +5,17 @@ import image1 from "../../assets/image/record/record1.png";
 import image2 from "../../assets/image/record/record2.png";
 import image3 from "../../assets/image/record/record3.png";
 import { CardComponent } from "../ui/common/card/TopCard";
-import { ScrollToTopComponent } from "../ui/common/scroll-top/ScrollTopComponent";
 import { MyDiaryComponent } from "./diary/MyDiaryComponent";
 
 const Main = styled.div`
   display: grid;
   grid-template-rows: max-content max-content auto;
   gap: 56px;
-  margin-bottom: 64px;
   padding: 56px 160px;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 64px;
+
   .header {
     display: grid;
     grid-template-columns: repeat(3, max-content);
@@ -48,7 +50,6 @@ export const RecordComponent = () => {
       <img src={imageChar.src} />
       <img src={exercise.src} />
       <MyDiaryComponent />
-      <ScrollToTopComponent />
     </Main>
   );
 };

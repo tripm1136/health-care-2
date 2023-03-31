@@ -36,11 +36,11 @@ const menuItem: MenuItemProps[] = [
   {
     icon: IconInfo,
     title: "お知らせ",
-    path: "",
+    withCount: true,
   },
   {
     icon: IconMenu,
-    path: "",
+    isHamberger: true,
   },
 ];
 export const HeaderComponent = () => {
@@ -49,8 +49,8 @@ export const HeaderComponent = () => {
       <a href="/home">
         <img src={url.src} />
       </a>
-      {menuItem.map(({ icon, title, path }, index) => (
-        <MenuItemComponent key={index} icon={icon} title={title} path={path} />
+      {menuItem.map((item, index) => (
+        <MenuItemComponent key={index} {...item} />
       ))}
     </MainHeader>
   );

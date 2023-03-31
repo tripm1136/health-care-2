@@ -26,6 +26,7 @@ const Main = styled.div<{ url }>`
       color: #ffcc21;
     }
     .des {
+      cursor: pointer;
       height: 24px;
       border-radius: 4px;
       background: #ff963c;

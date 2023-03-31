@@ -5,7 +5,7 @@ import IconUp from "../../../icon/IconUp";
 const Main = styled.div`
   cursor: pointer;
   position: absolute;
-  right: 46px;
+  right: calc((100% - 960px) / 2 - 80px);
   top: 60%;
   bottom: 0px;
   background: rgba(255, 255, 255, 0.0001);
@@ -21,7 +21,6 @@ const Main = styled.div`
 export const ScrollToTopComponent = () => {
   const onScrollToTop = () => {
     const el = document.getElementById("body_component");
-    console.log("click");
     el.scrollTop = 0;
   };
   return (

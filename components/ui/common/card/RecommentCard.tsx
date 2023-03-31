@@ -5,9 +5,9 @@ const Main = styled.div`
   width: 216px;
   height: 144px;
   background: #2e2e2e;
-  padding: 8px 24px;
   display: grid;
-  grid-tempalte-rows: max-content max-content;
+  grid-template-rows: 54px max-content 26px;
+  align-content: center;
   gap: 8px;
   .title {
     font-family: "Inter";
@@ -22,17 +22,38 @@ const Main = styled.div`
 
     color: #ffcc21;
   }
+  .divider {
+    width: 56px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.0001);
+    border: 1px solid #ffffff;
+    margin: 0 auto;
+    margin-top: 2px;
+  }
+  .des {
+    font-family: "Hiragino Kaku Gothic Pro";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+
+    text-align: center;
+
+    color: #ffffff;
+  }
 `;
 
 interface Props {
   title: string;
   description: string;
-  imageUrl: string;
 }
-export const RecommentCard = ({ title, description, imageUrl }: Props) => {
+export const RecommentCard = ({ title, description }: Props) => {
   return (
     <Main>
-      <div className="title">RECOMMENDED COLUMN</div>
+      <div className="title">{title}</div>
+      <div className="divider" />
+      <div className="des">{description}</div>
     </Main>
   );
 };
